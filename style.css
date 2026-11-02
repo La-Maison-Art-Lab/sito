@@ -291,3 +291,25 @@ fieldset{border:0;padding:0;margin:0}
 .archivio .polaroid:nth-child(even){--tinta:#A79FBD}
 .archivio .polaroid:nth-child(3n){--tinta:#D98A62}
 .polaroid:hover .duo::before,.polaroid:hover .duo::after,.duo:hover::before,.duo:hover::after{opacity:0}
+/* collage in apertura */
+.hero-figura.collage{position:relative;height:700px;width:min(540px,100%)}
+.collage .polaroid{position:absolute;width:52%}
+.collage .polaroid .duo img{filter:none}
+.collage .polaroid .duo::before,.collage .polaroid .duo::after{opacity:0}
+
+.hero-figura.collage .timbro{top:-30px;right:-20px;left:auto;bottom:auto;z-index:6}
+/* corsi con foto */
+.famiglia.con-foto{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:44px;align-items:start}
+.famiglia-foto{padding-top:24px}
+.famiglia.con-foto .corsi{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){
+  .hero-figura.collage{height:520px;margin:24px auto 0}
+  .famiglia.con-foto{grid-template-columns:minmax(0,1fr)}
+  .famiglia-foto{max-width:220px;margin:0 auto}
+  .famiglia.con-foto .corsi{grid-template-columns:minmax(0,1fr)}
+}
+.hero-figura.collage .polaroid{bottom:auto;left:auto;right:auto}
+.collage .polaroid{width:48%}
+.hero-figura.collage{height:740px}
+.hero-figura.collage .timbro{top:auto;bottom:40px;left:-70px;right:auto}
+@media (max-width:900px){.hero-figura.collage{height:600px}.hero-figura.collage .timbro{left:-10px;bottom:10px}}
