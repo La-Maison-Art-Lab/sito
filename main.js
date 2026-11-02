@@ -43,3 +43,19 @@
       });
   });
 })();
+
+(function () {
+  var foto = document.querySelectorAll('.collage .polaroid');
+  Array.prototype.forEach.call(foto, function (f) {
+    f.setAttribute('tabindex', '0');
+    f.setAttribute('role', 'button');
+    f.setAttribute('aria-pressed', 'false');
+    function cambia() {
+      var on = !f.classList.contains('nitida');
+      Array.prototype.forEach.call(foto, function (g) { g.classList.remove('nitida'); g.setAttribute('aria-pressed', 'false'); });
+      if (on) { f.classList.add('nitida'); f.setAttribute('aria-pressed', 'true'); }
+    }
+    f.addEventListener('click', cambia);
+    f.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cambia(); } });
+  });
+})();

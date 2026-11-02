@@ -313,3 +313,15 @@ fieldset{border:0;padding:0;margin:0}
 .hero-figura.collage{height:740px}
 .hero-figura.collage .timbro{top:auto;bottom:40px;left:-70px;right:auto}
 @media (max-width:900px){.hero-figura.collage{height:600px}.hero-figura.collage .timbro{left:-10px;bottom:10px}}
+/* effetto sbiadito: si ravviva al passaggio o al tocco */
+.collage .polaroid{width:46%;cursor:pointer}
+.hero-figura.collage{height:830px}
+.collage .polaroid .duo img{filter:saturate(.45) contrast(.82) brightness(1.1) sepia(.18) blur(.6px);transition:filter .45s ease}
+.collage .polaroid .duo::after{opacity:.18;background:#F5EEE4;mix-blend-mode:screen}
+.collage .polaroid:hover .duo img,.collage .polaroid:focus-visible .duo img,.collage .polaroid.nitida .duo img{filter:none}
+.collage .polaroid:hover .duo::after,.collage .polaroid:focus-visible .duo::after,.collage .polaroid.nitida .duo::after{opacity:0}
+.collage .polaroid.nitida{transform:rotate(0deg) scale(1.04);z-index:5}
+@media (max-width:900px){.hero-figura.collage{height:690px}}
+.hero-griglia{align-items:start}
+.hero-griglia > div:first-child{padding-top:40px}
+.hero-figura.collage{height:800px}
