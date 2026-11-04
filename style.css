@@ -325,3 +325,7 @@ fieldset{border:0;padding:0;margin:0}
 .hero-griglia{align-items:start}
 .hero-griglia > div:first-child{padding-top:40px}
 .hero-figura.collage{height:800px}
+/* apertura più grande e incisiva */
+.hero-figura.collage{width:min(600px,100%);height:860px}
+.collage .polaroid{width:50%}
+.collage .polaroid .duo img{filter:saturate(.55) contrast(.9) brightness(1.06) sepia(.15)}
